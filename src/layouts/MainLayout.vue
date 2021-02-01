@@ -1,0 +1,33 @@
+<template>
+  <q-layout view="lHh Lpr lFf">
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      content-class="bg-grey-1"
+    >
+      <q-list>
+        <q-item-label
+          header
+          class="text-grey-8"
+        >
+          UML Editor
+        </q-item-label>
+      </q-list>
+    </q-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      leftDrawerOpen: false
+    }
+  }
+}
+</script>
